@@ -206,9 +206,11 @@ public class GUI{
         try {
             for (int i = 0; i < expenses.length; i++) {
                 total = total + Integer.parseInt(expenses[i].getText());
+                //total from all expense text boxes
             }
             for(int i = 0; i < expenses.length; i++){
                 values[i] = String.valueOf(Math.round((Double.parseDouble(expenses[i].getText())*360)/total));
+
         }
             int monthIncome = Integer.parseInt(totalIncome.getText());
             monthIncome = monthIncome - total;
@@ -335,7 +337,6 @@ public class GUI{
             //catches empty fields or incorrect fields and displays error message
         }catch(Exception a){
             JOptionPane.showMessageDialog(frame, "Incorrect field submission.","Error", JOptionPane.ERROR_MESSAGE);
-            panel1.revalidate();
         }
 
 
